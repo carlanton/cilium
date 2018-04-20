@@ -117,8 +117,8 @@ In our Star Wars inspired, simple example, there are three microservices applica
 **Application Topology for Cilium and Kubernetes**
 
 .. image:: images/cilium_http_gsg.png
-   :height: 250px
-   :width: 250px
+   :height: 100px
+   :width: 50%
    :scale: 50%
    :align: left
 
