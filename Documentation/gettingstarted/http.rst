@@ -117,6 +117,9 @@ In our Star Wars inspired, simple example, there are three microservices applica
 **Application Topology for Cilium and Kubernetes**
 
 .. image:: images/cilium_http_gsg.png
+   :height: 250px
+   :width: 250px
+   :align: left
 
 The file ``http-sw-app.yaml`` contains a `Kubernetes Deployment <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>`_ for each of the three services.
 Each deployment is identified using the Kubernetes labels (org=empire, class=deathstar), (org=empire, class=tiefighter),
