@@ -6,7 +6,7 @@
 
 #include "common/common/logger.h"
 
-#include "server/config/network/http_connection_manager.h"
+#include "extensions/filters/network/http_connection_manager/config.h"
 
 #include "accesslog.h"
 #include "cilium/cilium_l7policy.pb.h"

@@ -14,7 +14,7 @@
 #include "common/filesystem/filesystem_impl.h"
 #include "common/protobuf/protobuf.h"
 #include "common/thread_local/thread_local_impl.h"
-#include "server/config/network/http_connection_manager.h"
+#include "extensions/filters/network/http_connection_manager/config.h"
 
 #include "test/integration/http_integration.h"
 #include "test/test_common/environment.h"
@@ -306,8 +306,8 @@ public:
     : HttpIntegrationTest(Http::CodecClient::Type::HTTP1, GetParam(), config) {
     // Undo legacy compat rename done by HttpIntegrationTest constructor.
     // config_helper_.renameListener("cilium");
-    for (const Logger::Logger& logger : Logger::Registry::loggers()) {
-      logger.setLevel(static_cast<spdlog::level::level_enum>(0));
+    for (Logger::Logger& logger : Logger::Registry::loggers()) {
+      logger.setLevel(spdlog::level::trace);
     }
   }
   ~CiliumIntegrationTestBase() {

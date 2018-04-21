@@ -8,7 +8,7 @@
 #include "common/common/enum_to_int.h"
 #include "common/config/utility.h"
 
-#include "server/config/network/http_connection_manager.h"
+#include "extensions/filters/network/http_connection_manager/config.h"
 
 #include "envoy/singleton/manager.h"
 

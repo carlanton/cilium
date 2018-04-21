@@ -30,9 +30,9 @@ subscribe(const std::string& grpc_method, const envoy::api::v2::core::Node& node
 
   return std::make_unique<Config::GrpcSubscriptionImpl<Protocol>>(
                 node,
-		Config::Utility::factoryForApiConfigSource(cm.grpcAsyncClientManager(),
-							   api_config_source,
-							   scope)->create(),
+		Config::Utility::factoryForGrpcApiConfigSource(cm.grpcAsyncClientManager(),
+							       api_config_source,
+							       scope)->create(),
 		dispatcher, *method, stats);
 }
 
